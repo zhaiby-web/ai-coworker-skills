@@ -1,0 +1,4 @@
+interface:
+  display_name: "小白指挥AI干活之复审只挑真毛病"
+  short_description: "复审意见必须答得上'不改会坏什么'，措辞找茬不算发现；连续两轮交付物零变化必须报警，禁止文档治理冒充推进"
+  default_prompt: "Use $reviewing-for-substance to review this for substance only: verdict first, findings with what-breaks, no nitpicks."
