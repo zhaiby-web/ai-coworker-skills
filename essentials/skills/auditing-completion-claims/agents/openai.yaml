@@ -1,0 +1,4 @@
+interface:
+  display_name: "验收追问·别被完成了骗了"
+  short_description: "对任何'完成了/通过了/环境好了'按层级、证据等级和残留缺口做验收追问，也约束自己的完成汇报"
+  default_prompt: "Use $auditing-completion-claims to audit this completion claim: name its layer, grade its evidence, list residuals and the next owner."

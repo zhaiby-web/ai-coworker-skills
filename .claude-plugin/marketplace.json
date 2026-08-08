@@ -1,0 +1,18 @@
+{
+  "name": "ai-coworker-skills",
+  "owner": {
+    "name": "zhaiby"
+  },
+  "plugins": [
+    {
+      "name": "essentials",
+      "source": "./essentials",
+      "description": "AI 同事基本功：让 AI 说人话、别骗你、别烦你、别小题大做。4 个行为矫正 skill，适用于任何让 AI 干活的人。"
+    },
+    {
+      "name": "ai-dev-starter",
+      "source": "./ai-dev-starter",
+      "description": "小白指挥 AI 开发：不懂代码也能指挥 AI 做出能上线的东西。教练 + 原型选型 + 开工门禁 + 低上下文工作包。"
+    }
+  ]
+}

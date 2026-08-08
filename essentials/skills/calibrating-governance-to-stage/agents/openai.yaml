@@ -1,0 +1,4 @@
+interface:
+  display_name: "阶段适配治理"
+  short_description: "按爆炸半径给流程定价：测试阶段轻门、生产全套、零消费者零治理；戒掉把测试环境发现写成线上事故的毛病"
+  default_prompt: "Use $calibrating-governance-to-stage to price the right amount of process for this work's actual stage and blast radius."

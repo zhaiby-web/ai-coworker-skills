@@ -1,0 +1,4 @@
+interface:
+  display_name: "低上下文工作包"
+  short_description: "贵上下文做判断和验收，执行拆成自包含工作包（负责/不负责/输入契约/输出物/验收五要素）交给缺上下文的AI或新人"
+  default_prompt: "Use $packaging-low-context-work to split this work: keep the judgment here, package the execution into self-contained task cards."

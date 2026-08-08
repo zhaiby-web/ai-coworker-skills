@@ -1,0 +1,4 @@
+interface:
+  display_name: "原型选型"
+  short_description: "按阶段和不确定点判断该做HTML原型、ReactMock原型还是先写方案，禁止HTML硬转React、原型冒充正式代码"
+  default_prompt: "Use $choosing-prototype-form to decide which prototype form fits this stage and produce the right template."

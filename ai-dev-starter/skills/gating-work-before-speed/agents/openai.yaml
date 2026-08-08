@@ -1,0 +1,4 @@
+interface:
+  display_name: "开工门禁"
+  short_description: "开工前五问+契约/数据源/侵入性三道门+正式战场锁定+commit到MR三级授权，先管边界再管速度"
+  default_prompt: "Use $gating-work-before-speed to run the five questions and admission gates before this work starts."
