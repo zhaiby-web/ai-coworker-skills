@@ -1,4 +1,4 @@
 interface:
-  display_name: "AI开发教练"
+  display_name: "小白指挥AI开发之私人教练"
   short_description: "带非研发背景的人指挥AI做开发：说人话教判断而非无限代做，每次执行附带为什么/下次怎么问/如何识别越界"
   default_prompt: "Use $ai-development-coach to coach me through this development situation: explain in plain language, grade the evidence, and tell me what to ask next."

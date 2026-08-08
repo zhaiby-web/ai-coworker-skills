@@ -2,8 +2,11 @@
 name: gating-work-before-speed
 description: MUST run BEFORE writing any implementation code in a git repository — including when another methodology skill (e.g. test-driven-development) governs how the code gets written; this gate decides whether and where work may start, then hands off. Triggers on any request to 加功能/实现/改代码/帮我做个X, and especially on 直接开干、顺手提交、写完就提交 phrasing (bundled authorization is exactly what needs unbundling). Front-loads the five-question gate (contract, data source, layer, evidence, forbidden list), battlefield lock (repo/branch/baseline), and the commit→push→MR authorization ladder so AI speed never outruns boundary confirmation.
 slug: gating-work-before-speed
-version: 1.0.0
-displayName: "开工门禁"
+version: 1.0.1
+displayName: "小白指挥AI开发之怎么开工"
+summary: "AI 动手前先过五问三道门：改哪、凭什么、不能碰什么；不乱改代码、提交逐级授权。"
+tags: ["开工", "乱改代码", "git", "提交规范", "边界"]
+license: Apache-2.0
 ---
 
 # Gating Work Before Speed

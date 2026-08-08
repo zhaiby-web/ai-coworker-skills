@@ -1,4 +1,4 @@
 interface:
-  display_name: "决策路由"
+  display_name: "小白指挥AI干活之我是产品AI是开发"
   short_description: "技术判断自主执行做完告知，只有产品体验/上线范围/目标三类主动上报且带推荐方案，不把技术作业甩给用户拍板"
   default_prompt: "Use $routing-decisions-to-humans to route this open question: decide technical lanes yourself, escalate product lanes with a recommendation."

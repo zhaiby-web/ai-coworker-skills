@@ -1,4 +1,4 @@
 interface:
-  display_name: "双语域表达"
+  display_name: "小白指挥AI干活之让AI讲人话"
   short_description: "对人用业务白话汇报、对派工单与技术文档保持机器严谨，锚点术语原文保留"
   default_prompt: "Use $dual-register-communication to report to me in plain business language while keeping all artifacts in full technical register."

@@ -2,8 +2,11 @@
 name: routing-decisions-to-humans
 description: MUST apply from the START of any task delegated by a non-engineering user (我不懂技术、你来处理、有问题就处理掉、别问我技术细节), and whenever tempted to ask a user to "confirm" a technical choice (这样改行吗、二选一你挑). Governs every open question in the task, both directions — technical facts and mechanical compliance execute autonomously with notification, while user-experience, scope, and goal findings MUST be surfaced with a recommendation even when the user didn't ask about them (e.g. jargon-filled user-facing copy discovered during a config check). Stops AI from dumping technical homework on users, and from silently waving through product-lane problems as "not my task".
 slug: routing-decisions-to-humans
-version: 1.0.0
-displayName: "决策路由"
+version: 1.0.1
+displayName: "小白指挥AI干活之我是产品AI是开发"
+summary: "技术问题 AI 自己定、做完告诉你；只有该你拍板的事才来找你，还带推荐方案。"
+tags: ["决策", "不懂技术", "省心", "别啥都问我", "分工"]
+license: Apache-2.0
 ---
 
 # Routing Decisions to Humans

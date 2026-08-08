@@ -2,8 +2,11 @@
 name: auditing-completion-claims
 description: Use whenever a completion claim must be accepted or issued — an agent, subagent, tool, or teammate reports 完成了/做好了/通过了/环境好了/已经改了, the user states or relays such a claim (发布好了、研发说改完了), or the session itself is about to report completion. Audits the claim by layer, evidence grade, and residual gaps so that "it says done" never silently becomes "it is done". Especially for non-engineering users directing AI work who cannot judge completion from code.
 slug: auditing-completion-claims
-version: 1.0.0
-displayName: "验收追问"
+version: 1.0.1
+displayName: "小白指挥AI干活之验收神器"
+summary: "AI 说「做完了」先别信——查证据、问层级，防糊弄、防假完成，把验收拦在翻车前。"
+tags: ["验收", "防糊弄", "假完成", "效率办公", "靠谱"]
+license: Apache-2.0
 ---
 
 # Auditing Completion Claims

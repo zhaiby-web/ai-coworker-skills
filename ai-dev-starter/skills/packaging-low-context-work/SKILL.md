@@ -2,8 +2,11 @@
 name: packaging-low-context-work
 description: Use when handing work to an executor who lacks this session's context — a cheaper/faster AI agent, a sub-session, a contractor, or a teammate new to the project — and when deciding what to do in-context versus what to delegate (让 Codex 跑、派给子会话、交给新来的研发). Splits work by context-dependence: high-context judgment (spec, semantics, decisions, acceptance) stays with the context-rich side; execution ships out as self-contained work packages with explicit boundaries. Also governs the economics: expensive context does thinking, cheap execution does legwork, receipts close the loop.
 slug: packaging-low-context-work
-version: 1.0.0
-displayName: "低上下文工作包"
+version: 1.0.1
+displayName: "小白指挥AI开发之怎么派活"
+summary: "把活拆成新人和 AI 都能独立干对的任务卡，你只做判断和验收。"
+tags: ["派活", "拆任务", "带新人", "分工", "任务卡"]
+license: Apache-2.0
 ---
 
 # Packaging Low-Context Work
