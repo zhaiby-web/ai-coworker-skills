@@ -1,6 +1,9 @@
 ---
 name: calibrating-governance-to-stage
 description: Use when deciding how much process, review, sign-off, or incident-response a piece of work deserves — before opening approval workflows, drafting escalations, declaring incidents, or adding governance artifacts. Matches ceremony to the work's actual stage and blast radius: dev/pilot/dark-launch stages get light gates, production gets the full apparatus, and artifacts with zero consumers get zero governance. Cures the AI habits of running production-grade ceremony on test-stage work, framing dev-environment findings as live incidents, and polishing process instead of shipping capability.
+slug: calibrating-governance-to-stage
+version: 1.0.0
+displayName: "阶段适配治理"
 ---
 
 # Calibrating Governance to Stage

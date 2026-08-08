@@ -1,6 +1,9 @@
 ---
 name: choosing-prototype-form
 description: Use when deciding whether to build an HTML prototype, a React Mock prototype, or a written spec first — or when a user asks to "把 HTML 原型转成 React"、做个原型、做客户演示 demo. Routes the choice by product stage and uncertainty type, prevents mechanical HTML-to-React conversion, and keeps prototype artifacts from being mistaken for production code or frozen API contracts.
+slug: choosing-prototype-form
+version: 1.0.0
+displayName: "原型选型"
 ---
 
 # Choosing Prototype Form

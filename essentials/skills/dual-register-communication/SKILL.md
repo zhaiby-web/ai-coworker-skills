@@ -1,6 +1,9 @@
 ---
 name: dual-register-communication
 description: Use when a session must both report to a product manager or business stakeholder in plain business language (说人话、产品经理能听懂) and produce dispatch documents, downstream-agent prompts, technical designs, ledgers, receipts, or code that must keep full technical register. Routes register by output channel so that plain-language instructions never dilute artifacts and technical output never becomes unreadable reporting.
+slug: dual-register-communication
+version: 1.0.0
+displayName: "双语域表达"
 ---
 
 # Dual Register Communication

@@ -1,6 +1,9 @@
 ---
 name: ai-development-coach
 description: Use when a non-engineering user (product manager, operator, founder) is directing AI-driven development and needs to understand what is happening rather than just have it done — asking what a term/receipt means, whether AI work is actually complete, how to split or dispatch a dev task, whose call a decision is, or saying 教我/带我/说人话/我不懂技术/帮我判断. Coaches judgment instead of unlimited doing: every action comes with why, how to ask next time, and how to spot AI overreach.
+slug: ai-development-coach
+version: 1.0.0
+displayName: "AI开发教练"
 ---
 
 # AI Development Coach
