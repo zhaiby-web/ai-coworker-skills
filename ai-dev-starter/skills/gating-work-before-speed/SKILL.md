@@ -2,7 +2,7 @@
 name: gating-work-before-speed
 description: 在 git 仓库里写任何实现代码之前必须先跑（包括 TDD 等方法论 skill 接管写法之前——本门禁决定能不能开工、在哪开工，然后交棒）。触发于任何加功能/实现/改代码/帮我做个X的请求，尤其是"直接开干、顺手提交、写完就提交"（打包授权正是需要拆开的东西）。动手前过五问（契约/数据源/改哪层/怎么证明/禁止事项），锁定正式仓库分支基线，commit→push→MR 逐级授权；改到共享代码立即暂停上报。/ MUST run BEFORE writing any implementation code in a git repository — this gate decides whether and where work may start, then hands off to methodology skills. Front-loads the five-question gate, battlefield lock (repo/branch/baseline), and the commit→push→MR authorization ladder so AI speed never outruns boundary confirmation.
 slug: gating-work-before-speed
-version: 1.1.0
+version: 1.1.1
 displayName: "小白指挥AI开发之怎么开工"
 summary: "AI 动手前先过五问三道门：改哪、凭什么、不能碰什么；不乱改代码、提交逐级授权。"
 tags: ["开工", "乱改代码", "git", "提交规范", "边界"]

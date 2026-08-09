@@ -2,7 +2,7 @@
 name: packaging-low-context-work
 description: 把活交给缺上下文的执行者时使用——便宜的 AI、子会话、外包、新来的同事（让 Codex 跑、派给子会话、带新人），以及决定哪些自己做哪些派出去时。按上下文依赖度切分：语义、边界、决策、验收留在懂的一侧；执行拆成五要素任务卡（负责/不负责/输入契约/输出物/验收），让称职的陌生人只凭卡片就能做对；回执必验收才算闭环。/ Use when handing work to an executor who lacks this session's context — a cheaper AI, a sub-session, a contractor, or a new teammate. High-context judgment stays; execution ships as self-contained work packages with explicit boundaries. Expensive context does thinking, cheap execution does legwork, receipts close the loop.
 slug: packaging-low-context-work
-version: 1.1.0
+version: 1.1.1
 displayName: "小白指挥AI开发之怎么派活"
 summary: "把活拆成新人和 AI 都能独立干对的任务卡，你只做判断和验收。"
 tags: ["派活", "拆任务", "带新人", "分工", "任务卡"]

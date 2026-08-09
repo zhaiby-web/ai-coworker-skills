@@ -2,7 +2,7 @@
 name: reviewing-for-substance
 description: 在让 AI 复审任何东西（代码、方案、文档、合同）、收到复审意见要判断哪些该改、或发现多个会话互相修改格式措辞而正事不动（一直在搞文档治理不推进正事）时使用。强制实质性标准：每条意见必须答得上"不改会坏什么"，措辞找茬不算发现，"没有问题"是合法结论；连续两轮交付物零变化必须报警。/ Use when asking an AI to review anything (code, plan, doc, contract), receiving findings, or when sessions churn meta-work (format fixes, review-of-review) while the deliverable sits untouched. Findings must name what breaks or gets rebuilt; nitpicks rejected; zero-findings is a legitimate verdict; every round must move the deliverable, not the paperwork about it.
 slug: reviewing-for-substance
-version: 1.1.0
+version: 1.1.1
 displayName: "小白指挥AI干活之复审只挑真毛病"
 summary: "复审意见必须答得上'不改会坏什么'；措辞找茬不算发现，没毛病就说没毛病；连续空转要报警，不许拿文档治理冒充推进。"
 tags: ["复审", "找茬", "空转", "文档治理", "实质问题"]

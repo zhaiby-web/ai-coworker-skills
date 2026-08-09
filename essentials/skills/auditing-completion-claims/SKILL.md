@@ -2,7 +2,7 @@
 name: auditing-completion-claims
 description: 当任何一方声称"完成了/做好了/通过了/环境好了/已发布/已经改了"时使用——AI 或工具的汇报、你转述别人的结论、或会话自己即将宣布完成。按层级和证据等级审计：能查机器事实的先查（坐标+新鲜度），查不到的追问四件事（完成了什么/怎么证明/还缺什么/谁接下一步），把假完成拦在验收前。/ Use whenever a completion claim must be accepted or issued — an agent, tool, or teammate reports done/passed/ready, the user relays such a claim, or the session itself is about to report completion. Audits by layer, evidence grade, and residual gaps so "it says done" never silently becomes "it is done."
 slug: auditing-completion-claims
-version: 1.1.0
+version: 1.1.1
 displayName: "小白指挥AI干活之验收神器"
 summary: "AI 说「做完了」先别信——查证据、问层级，防糊弄、防假完成，把验收拦在翻车前。"
 tags: ["验收", "防糊弄", "假完成", "效率办公", "靠谱"]
