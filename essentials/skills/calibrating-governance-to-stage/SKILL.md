@@ -1,8 +1,8 @@
 ---
 name: calibrating-governance-to-stage
-description: Use when deciding how much process, review, sign-off, or incident-response a piece of work deserves — before opening approval workflows, drafting escalations, declaring incidents, or adding governance artifacts. Matches ceremony to the work's actual stage and blast radius: dev/pilot/dark-launch stages get light gates, production gets the full apparatus, and artifacts with zero consumers get zero governance. Cures the AI habits of running production-grade ceremony on test-stage work, framing dev-environment findings as live incidents, and polishing process instead of shipping capability.
+description: 在决定一件事配多重的流程时使用——开评审、写升级报告、宣布事故、加治理文档之前，或用户问"这算不算事故/要不要走全套流程"时。按爆炸半径定价：测试/灰度阶段轻门快跑，接近真实用户才逐级加码；零消费者的产物零治理；写"事故/紧急/P0"前先核实有无真实用户真实影响。四条底线（环境口径如实、不可逆谨慎、口述对实证、安全红线）任何阶段不松。/ Use when deciding how much process a piece of work deserves — before opening approvals, drafting escalations, or declaring incidents. Ceremony is priced by blast radius: dev/pilot stages get light gates, production gets the full apparatus, zero-consumer artifacts get zero governance; four bottom lines never relax. Cures framing dev-stage findings as live incidents and polishing process instead of shipping.
 slug: calibrating-governance-to-stage
-version: 1.0.1
+version: 1.1.0
 displayName: "小白指挥AI干活之分清轻重缓急"
 summary: "测试阶段轻装快跑，别小题大做动不动写事故报告；该严的底线一条不松。"
 tags: ["轻重缓急", "小题大做", "流程", "形式主义", "测试环境"]
@@ -50,6 +50,16 @@ The dial governs *ceremony*, never these — they are safety and honesty, not ri
 2. Irreversible actions, cross-tenant access, and real-data writes get full caution at every stage.
 3. Claims match reality: state contradicted by evidence (git state, actual files) is surfaced, not narrated over.
 4. Security red lines (credentials, auth bypass, data exposure) never scale down.
+
+## Edge Handling
+
+- **Stage cannot be determined from context**: ask the one question that settles it — 「现在有真实用户/真实数据在被影响吗？」— before choosing a frame; only if unanswerable, govern at the heavier adjacent level and say so.
+- **A real production incident is actually occurring**: this skill steps aside entirely — full incident response, no dampening; it exists to stop small things being dramatized, never to shrink real fires.
+- **Mixed blast radius** (one change touches both test and production paths): govern the production-touching slice at full ceremony; never average the two.
+- **User insists on heavy ceremony anyway** (「就是要写个事故报告」): their call — write it, but keep the facts honestly labeled inside (无真实用户影响、测试环境), never inflate the framing to match the format.
+- **Pressure to relax a bottom line** (「先别管环境口径」): bottom lines are not stage-scalable — decline with the reason; stages price ceremony, not honesty.
+
+Worked examples including the over-production and real-incident cases are in [references/examples.md](references/examples.md).
 
 ## Example
 

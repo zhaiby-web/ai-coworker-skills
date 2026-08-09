@@ -1,8 +1,8 @@
 ---
 name: choosing-prototype-form
-description: Use when deciding whether to build an HTML prototype, a React Mock prototype, or a written spec first — or when a user asks to "把 HTML 原型转成 React"、做个原型、做客户演示 demo. Routes the choice by product stage and uncertainty type, prevents mechanical HTML-to-React conversion, and keeps prototype artifacts from being mistaken for production code or frozen API contracts.
+description: 决定原型该用什么做时使用——HTML 静态稿、React Mock 工程还是先写方案文档；用户说"把 HTML 原型转成 React""做个原型""做客户演示 Demo"时。按阶段和不确定点路由：方向没定先 HTML，方向收敛上 React Mock（统一 API 层+六态覆盖），技术路线未定先写方案；禁止 HTML 机械硬转 React、禁止原型冒充正式代码或冻结契约。/ Use when deciding whether to build an HTML prototype, a React Mock project, or a written spec first. Routes the choice by product stage and uncertainty type, prevents mechanical HTML-to-React conversion, and keeps prototype artifacts from being mistaken for production code or frozen API contracts.
 slug: choosing-prototype-form
-version: 1.0.1
+version: 1.1.0
 displayName: "小白指挥AI开发之原型Demo一把抓"
 summary: "HTML 还是 React 还是先写方案？按阶段选对原型，不做白工、不把 Demo 当正式代码。"
 tags: ["原型", "Demo", "HTML", "React", "产品设计"]
@@ -66,6 +66,16 @@ Four ready-to-paste templates (generate HTML prototype / rebuild React Mock from
 - 要客户正式演示或交研发拆任务，React Mock + 交付文档。
 - 已有 HTML，不硬转，重建 React Mock。
 - 能跑不等于能上线，正式工程必须过准入门禁。
+
+## Edge Handling
+
+- **Stage information missing** (can't tell if direction is settled): ask the two questions that decide everything — 「方向定了吗？给谁看？」— before choosing; never default to React because it looks professional.
+- **User insists on mechanical HTML→React conversion** after the anti-pattern is explained: comply, but label the output 「转换稿·未工程化」 and list the inherited debts (unsplit components, hard-coded data, no API layer) explicitly in the delivery.
+- **Prototype drifts toward production** (「就在这个基础上上线吧」): restate the admission gates and produce a prototype-to-formal handover list; the prototype never gets pushed into a formal repo as-is.
+- **Inheriting an unknown prototype**: inventory before extending — version, what's mocked, what's hard-coded; the inventory decides extend vs rebuild.
+- **Non-web prototype requested** (CLI, API mock): the same stage logic applies — say the mapping (探索期=脚本壳, 收敛期=带 mock 数据层的可运行工程) instead of declining.
+
+Worked examples including stage-mismatch and conversion-interception dialogues are in [references/examples.md](references/examples.md).
 
 ## Common Rationalizations
 

@@ -1,8 +1,8 @@
 ---
 name: auditing-completion-claims
-description: Use whenever a completion claim must be accepted or issued — an agent, subagent, tool, or teammate reports 完成了/做好了/通过了/环境好了/已经改了, the user states or relays such a claim (发布好了、研发说改完了), or the session itself is about to report completion. Audits the claim by layer, evidence grade, and residual gaps so that "it says done" never silently becomes "it is done". Especially for non-engineering users directing AI work who cannot judge completion from code.
+description: 当任何一方声称"完成了/做好了/通过了/环境好了/已发布/已经改了"时使用——AI 或工具的汇报、你转述别人的结论、或会话自己即将宣布完成。按层级和证据等级审计：能查机器事实的先查（坐标+新鲜度），查不到的追问四件事（完成了什么/怎么证明/还缺什么/谁接下一步），把假完成拦在验收前。/ Use whenever a completion claim must be accepted or issued — an agent, tool, or teammate reports done/passed/ready, the user relays such a claim, or the session itself is about to report completion. Audits by layer, evidence grade, and residual gaps so "it says done" never silently becomes "it is done."
 slug: auditing-completion-claims
-version: 1.0.2
+version: 1.1.0
 displayName: "小白指挥AI干活之验收神器"
 summary: "AI 说「做完了」先别信——查证据、问层级，防糊弄、防假完成，把验收拦在翻车前。"
 tags: ["验收", "防糊弄", "假完成", "效率办公", "靠谱"]
@@ -109,6 +109,16 @@ When the audited claim is an executor's receipt (a sub-agent, delegated session,
 4. Leave a trail either way: ratifications are recorded with who judged and why; the change is named explicitly in the commit message — never buried.
 
 **Ambiguity surfacing** — every receipt gets a dedicated 「⚠️ 需你知情」 section in the audit, listing: statements the receipt downplays or glosses over (「部分通过」的部分是什么); overreach found and its disposition; discretionary calls the auditor made on the user's behalf (user may overturn); and claims asserted but not verified. 宁可多摆一条，不可静默消化 — silently digesting an ambiguity converts the auditor into a co-author of the false 'done'.
+
+## Edge Handling
+
+- **Claim about an unreachable substrate** (another team's system, no access): do not simulate verification — run the four questions and label the result E4 (pending external confirmation), never E2.
+- **Vague claim with no object** (「都弄好了」): first pin down *what* was allegedly completed; auditing needs an object before it needs evidence.
+- **User accepts the risk** (「别验了就当完成」): a legitimate E5 call — record "treated as complete per user decision" with the unverified residuals listed, then proceed; neither argue nor silently drop the residual list.
+- **Urgency pressure** (「先上线再说」): urgency raises the cost of a false done; compress the audit to the four questions in one breath, never to zero.
+- **Same claim, second audit**: evidence already graded E1/E2 in this thread is not re-demanded; audit only the delta.
+
+Worked examples across claim types are in [references/examples.md](references/examples.md).
 
 ## Issuing Your Own Completion Claims
 

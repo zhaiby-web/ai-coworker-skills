@@ -1,8 +1,8 @@
 ---
 name: gating-work-before-speed
-description: MUST run BEFORE writing any implementation code in a git repository — including when another methodology skill (e.g. test-driven-development) governs how the code gets written; this gate decides whether and where work may start, then hands off. Triggers on any request to 加功能/实现/改代码/帮我做个X, and especially on 直接开干、顺手提交、写完就提交 phrasing (bundled authorization is exactly what needs unbundling). Front-loads the five-question gate (contract, data source, layer, evidence, forbidden list), battlefield lock (repo/branch/baseline), and the commit→push→MR authorization ladder so AI speed never outruns boundary confirmation.
+description: 在 git 仓库里写任何实现代码之前必须先跑（包括 TDD 等方法论 skill 接管写法之前——本门禁决定能不能开工、在哪开工，然后交棒）。触发于任何加功能/实现/改代码/帮我做个X的请求，尤其是"直接开干、顺手提交、写完就提交"（打包授权正是需要拆开的东西）。动手前过五问（契约/数据源/改哪层/怎么证明/禁止事项），锁定正式仓库分支基线，commit→push→MR 逐级授权；改到共享代码立即暂停上报。/ MUST run BEFORE writing any implementation code in a git repository — this gate decides whether and where work may start, then hands off to methodology skills. Front-loads the five-question gate, battlefield lock (repo/branch/baseline), and the commit→push→MR authorization ladder so AI speed never outruns boundary confirmation.
 slug: gating-work-before-speed
-version: 1.0.1
+version: 1.1.0
 displayName: "小白指挥AI开发之怎么开工"
 summary: "AI 动手前先过五问三道门：改哪、凭什么、不能碰什么；不乱改代码、提交逐级授权。"
 tags: ["开工", "乱改代码", "git", "提交规范", "边界"]
@@ -67,6 +67,16 @@ Commit unit standard: one change that can be described in one sentence, reviewed
 ## Chat Is Not a Constraint
 
 A boundary stated in conversation evaporates in the next context window. Every load-bearing constraint (target repo, baseline, data source, forbidden list) must be written into the dispatch prompt's hard-constraint section, the task ledger, or the review checklist. If it lives only in chat history, it does not exist.
+
+## Edge Handling
+
+- **No git repo at all** (one-off script, scratch dir): the battlefield lock is waived — say so explicitly — but the five questions still run in light form, ending with 「本次无版本控制，产物不可回滚」.
+- **User bundles all authorization up front** (「全都授权了，一路干到 MR」): accept only rung-by-rung explicit grants — restate which rungs were named (commit? push? MR?) and treat the unnamed ones as not granted.
+- **A gate question has no answer** (nobody knows the authoritative data source): stop and report the open gate; guessing-and-building is exactly the rework this skill exists to prevent.
+- **New scope arrives mid-task** (「顺便把X也改了」): the addition re-enters the gate — passed gates cover the scope they were asked about, nothing rides in on their ticket.
+- **Emergency-fix pressure**: gates compress to their minimum (correct baseline + forbidden list), never to zero — and the report names which questions were skipped under pressure.
+
+Worked examples including the bundled-authorization and invasive-pause cases are in [references/examples.md](references/examples.md).
 
 ## Example
 

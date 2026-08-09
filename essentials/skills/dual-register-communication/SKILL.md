@@ -1,8 +1,8 @@
 ---
 name: dual-register-communication
-description: Use when a session must both report to a product manager or business stakeholder in plain business language (说人话、产品经理能听懂) and produce dispatch documents, downstream-agent prompts, technical designs, ledgers, receipts, or code that must keep full technical register. Routes register by output channel so that plain-language instructions never dilute artifacts and technical output never becomes unreadable reporting.
+description: 当会话既要用业务白话向你汇报（说人话、产品经理能听懂），又要产出保持技术严谨的派工单、技术方案、台账、代码时使用。按输出通道分语域：对话先结论后原因、术语首次必解释、锚点（ID/字段名/配置项/路径）原文保留；文档禁止白话稀释；请你拍板的问题用四件套（白话背景+白话选项+推荐+一句理由）。/ Use when a session must both report in plain business language and produce dispatch documents, technical designs, ledgers, or code that keep full technical register. Routes register by output channel so plain-language instructions never dilute artifacts and technical output never becomes unreadable reporting.
 slug: dual-register-communication
-version: 1.0.1
+version: 1.1.0
 displayName: "小白指挥AI干活之让AI讲人话"
 summary: "汇报用大白话你能看懂，写文档保持专业不掺水；术语首次出现必须解释。"
 tags: ["说人话", "汇报", "沟通", "术语翻译", "大白话"]
@@ -71,6 +71,16 @@ Before finalizing an artifact:
 1. Search the artifact for readability-motivated imprecision: vague quantifiers, dropped identifiers, narrative phrasing replacing state names.
 2. Confirm no operative sentence exists only in plain register; every requirement has a technical restatement.
 3. Confirm the artifact is self-contained for its consumer without the chat transcript.
+
+## Edge Handling
+
+- **User asks for technical depth in chat** (「直接讲技术细节」): an explicit override — switch that stretch to technical register; the default returns when the stretch ends.
+- **No artifact channel in play** (pure conversation): plain register governs alone; deliver technical detail on request, not by default.
+- **A term with no good plain rendering**: keep the term, give the nearest analogy, and mark it 「术语，可跳过」 rather than forcing a lossy translation.
+- **Mixed readers of the same chat** (user says engineers read along): declare which register leads, and use the 执行摘要-first pattern instead of blending sentence by sentence.
+- **User uses a term incorrectly**: confirm the intended meaning once, gently — never adopt the wrong usage into artifacts or the term ledger.
+
+Worked examples (decision questions, anchors, product copy) are in [references/examples.md](references/examples.md).
 
 ## Example
 

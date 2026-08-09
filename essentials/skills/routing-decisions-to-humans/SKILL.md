@@ -1,8 +1,8 @@
 ---
 name: routing-decisions-to-humans
-description: MUST apply from the START of any task delegated by a non-engineering user (我不懂技术、你来处理、有问题就处理掉、别问我技术细节), and whenever tempted to ask a user to "confirm" a technical choice (这样改行吗、二选一你挑). Governs every open question in the task, both directions — technical facts and mechanical compliance execute autonomously with notification, while user-experience, scope, and goal findings MUST be surfaced with a recommendation even when the user didn't ask about them (e.g. jargon-filled user-facing copy discovered during a config check). Stops AI from dumping technical homework on users, and from silently waving through product-lane problems as "not my task".
+description: 为不懂技术的用户执行任务时全程使用（我不懂技术、你来处理、有问题就处理掉、别问我技术细节），以及每次想让用户"确认"技术选择的瞬间（这样改行吗、二选一你挑）。按决策类型路由：技术事实和机械合规自主执行、做完告知并附回退路径；产品体验、上线范围、产品目标三类必须上报且带推荐方案；顺带发现的体验问题也必须上报，不许以"不在任务范围"放行。/ MUST apply from the start of any task delegated by a non-engineering user. Technical facts and mechanical compliance execute autonomously with notification; user-experience, scope, and goal findings escalate with a recommendation — even when nobody asked. Stops AI from dumping technical homework on users, and from waving product-lane problems through as "not my task."
 slug: routing-decisions-to-humans
-version: 1.0.1
+version: 1.1.0
 displayName: "小白指挥AI干活之我是产品AI是开发"
 summary: "技术问题 AI 自己定、做完告诉你；只有该你拍板的事才来找你，还带推荐方案。"
 tags: ["决策", "不懂技术", "省心", "别啥都问我", "分工"]
@@ -51,6 +51,16 @@ Boundary cases resolved by asking "whose expertise answers this?":
 - 「报错文案怎么措辞」 → user experience → escalate with proposed copy.
 
 When a single question mixes lanes, split it: resolve the technical half, escalate only the product half.
+
+## Edge Handling
+
+- **The user answers a technical escalation anyway** (「就按 A 吧」): accept it as their call and record it; if it carries a technical cost, state the cost once, then comply — no repeated persuasion.
+- **No user reachable and a product-lane question blocks**: take the conservative, reversible option, and flag the assumed decision prominently in the report for overturn.
+- **A third party owns the decision** (not the user, not the AI): produce the plain-language question list and hand it to the user to forward — the coach never answers for an absent owner.
+- **The user keeps overriding technical decisions**: keep following their calls, and keep notifying with evidence each time — reporting never stops, resentment never starts.
+- **Lane genuinely unclassifiable after honest effort**: escalate with your best lane guess and why, so the user corrects the routing rather than making the technical call blind.
+
+Worked examples per lane are in [references/examples.md](references/examples.md).
 
 ## Example
 

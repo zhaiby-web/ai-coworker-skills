@@ -1,8 +1,8 @@
 ---
 name: packaging-low-context-work
-description: Use when handing work to an executor who lacks this session's context — a cheaper/faster AI agent, a sub-session, a contractor, or a teammate new to the project — and when deciding what to do in-context versus what to delegate (让 Codex 跑、派给子会话、交给新来的研发). Splits work by context-dependence: high-context judgment (spec, semantics, decisions, acceptance) stays with the context-rich side; execution ships out as self-contained work packages with explicit boundaries. Also governs the economics: expensive context does thinking, cheap execution does legwork, receipts close the loop.
+description: 把活交给缺上下文的执行者时使用——便宜的 AI、子会话、外包、新来的同事（让 Codex 跑、派给子会话、带新人），以及决定哪些自己做哪些派出去时。按上下文依赖度切分：语义、边界、决策、验收留在懂的一侧；执行拆成五要素任务卡（负责/不负责/输入契约/输出物/验收），让称职的陌生人只凭卡片就能做对；回执必验收才算闭环。/ Use when handing work to an executor who lacks this session's context — a cheaper AI, a sub-session, a contractor, or a new teammate. High-context judgment stays; execution ships as self-contained work packages with explicit boundaries. Expensive context does thinking, cheap execution does legwork, receipts close the loop.
 slug: packaging-low-context-work
-version: 1.0.1
+version: 1.1.0
 displayName: "小白指挥AI开发之怎么派活"
 summary: "把活拆成新人和 AI 都能独立干对的任务卡，你只做判断和验收。"
 tags: ["派活", "拆任务", "带新人", "分工", "任务卡"]
@@ -47,6 +47,16 @@ Do not delegate to low-context executors: domain object modeling, semantic bound
 ## Closing the Loop
 
 Delegation ends at verification, not at hand-off. The context-rich side checks each receipt against the card's acceptance criteria — spot-checking claims against artifacts, not re-performing the work. An unverified receipt is an open task wearing a "done" costume. Integration across packages (does card 3's output actually fit card 1's interface?) is context-rich work; never assume executors converged.
+
+## Edge Handling
+
+- **A card keeps failing the litmus test** after two rewrites: the task still contains a judgment call — split the judgment out or keep the whole task; never ship the card anyway.
+- **The executor asks questions mid-card**: answering is normal; the *same type* of question recurring across executors means the card template is missing a field — fix the template, not the executor.
+- **The receipt shows work outside 不负责范围**: run the overreach protocol (compose with a completion-audit skill if installed) — disclosed-and-conservative may be ratified, anything else reverts; never silently merge.
+- **No delegation actually planned**: cards are for work that will leave your hands — writing five-field cards for work you'll do yourself in two minutes is ceremony, skip it.
+- **The work is pure judgment** (naming, trade-offs, semantic boundaries): don't force it into a card — it stays with context, whole.
+
+Worked examples including a bad-card diagnosis are in [references/examples.md](references/examples.md).
 
 ## Example
 

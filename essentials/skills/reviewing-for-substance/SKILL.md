@@ -1,8 +1,8 @@
 ---
 name: reviewing-for-substance
-description: Use whenever review happens or progress stalls in meta-work — asking an AI to review anything (code, plan, doc, contract), receiving review findings, deciding which findings to act on, or noticing that sessions keep exchanging document revisions, format fixes, and review-of-review rounds while the actual deliverable sits untouched (一直在搞文档治理不推进正事). Enforces substance: findings must name what breaks or gets rebuilt, wording nitpicks are rejected, zero-findings is a legitimate verdict, and every round must move the deliverable — not the paperwork about it.
+description: 在让 AI 复审任何东西（代码、方案、文档、合同）、收到复审意见要判断哪些该改、或发现多个会话互相修改格式措辞而正事不动（一直在搞文档治理不推进正事）时使用。强制实质性标准：每条意见必须答得上"不改会坏什么"，措辞找茬不算发现，"没有问题"是合法结论；连续两轮交付物零变化必须报警。/ Use when asking an AI to review anything (code, plan, doc, contract), receiving findings, or when sessions churn meta-work (format fixes, review-of-review) while the deliverable sits untouched. Findings must name what breaks or gets rebuilt; nitpicks rejected; zero-findings is a legitimate verdict; every round must move the deliverable, not the paperwork about it.
 slug: reviewing-for-substance
-version: 1.0.0
+version: 1.1.0
 displayName: "小白指挥AI干活之复审只挑真毛病"
 summary: "复审意见必须答得上'不改会坏什么'；措辞找茬不算发现，没毛病就说没毛病；连续空转要报警，不许拿文档治理冒充推进。"
 tags: ["复审", "找茬", "空转", "文档治理", "实质问题"]
@@ -60,6 +60,16 @@ Alarm rules:
 - The **author** must not solicit rubber stamps (「快速看一眼说个没问题就行」) — corrupting the reviewer corrupts the loop.
 - The **reviewed** answers every Blocking/Material finding with a fix or a reasoned rebuttal; silence is not a response. Rebuttal is legitimate — reviews are input, not commands.
 - The **requester** (the human) gets verdicts in plain language: what's actually wrong, what it costs, what's taste.
+
+## Edge Handling
+
+- **Nothing to review** (empty/missing artifact): say so and ask for the artifact — never manufacture a review of nothing.
+- **Ambiguous target** (which file? which version?): pin the review object first (path + version/coordinate); reviewing an unpinned target produces findings nobody can act on.
+- **Polish explicitly requested**: legitimate — switch to polish mode, deliver it labeled 「润色（非复审发现）」, and keep it out of any review verdict.
+- **Author disputes a Blocking finding**: one evidence-backed restatement maximum, then escalate to the owner for a call — no repeated argument rounds (that is the review-chain treadmill by another door).
+- **Reviewer cannot execute/verify** (no environment, no data): deliver findings labeled static-analysis-grade and name exactly what remains unverified — never present unrun checks as run.
+
+More worked examples per review type (code / requirements / busywork / polish-request) are in [references/examples.md](references/examples.md).
 
 ## Example
 
