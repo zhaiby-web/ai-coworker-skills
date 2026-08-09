@@ -2,7 +2,7 @@
 name: auditing-completion-claims
 description: Use whenever a completion claim must be accepted or issued — an agent, subagent, tool, or teammate reports 完成了/做好了/通过了/环境好了/已经改了, the user states or relays such a claim (发布好了、研发说改完了), or the session itself is about to report completion. Audits the claim by layer, evidence grade, and residual gaps so that "it says done" never silently becomes "it is done". Especially for non-engineering users directing AI work who cannot judge completion from code.
 slug: auditing-completion-claims
-version: 1.0.1
+version: 1.0.2
 displayName: "小白指挥AI干活之验收神器"
 summary: "AI 说「做完了」先别信——查证据、问层级，防糊弄、防假完成，把验收拦在翻车前。"
 tags: ["验收", "防糊弄", "假完成", "效率办公", "靠谱"]
@@ -38,6 +38,8 @@ These pairs are never treated as equal. When the left side is reported, the righ
 | Rule/spec is written | Code implements it |
 | Recorded as TODO | The stakeholder has seen and confirmed it |
 | Branch name is correct | The branch was cut from the correct baseline |
+| Checked in the local clone | The remote actually has it / lacks it (a clone is a snapshot with no freshness label — fetch or `ls-remote` first) |
+| The ledger records it | The verification was correct and fresh when recorded (a recorded error inherits the ledger's authority) |
 | Allowed to commit | Allowed to push; allowed to open a merge request (each is a separate authorization) |
 
 When a report equates any left side with its right side, downgrade the claim and ask for the missing layer's evidence.
@@ -55,6 +57,8 @@ Label every supporting statement with its grade. Never present a statement at a 
 | E5 | A decision the user can make directly | "your call: …" |
 
 Red lines: E3 must never be written as E1 or E2. "Ran once locally" must never be written as "solution confirmed". Absence of evidence is not a negative result — "the diagnostic was not seen" must not be reported as "the diagnostic returned zero".
+
+**Substrate coordinates (E2 on mutable substrates).** A command faithfully reports the state of *what it queried* — which may not be the authority you meant. Any E2 conclusion about a mutable substrate (a git repo, a database, a deployed service, a synced folder) must name its substrate and freshness in one line: `坐标：<repo> @ <branch> <sha> ｜ 新鲜度：fetch@时刻 / ls-remote直查 / 仅本地·未fetch / 本地即本体(无远端)`. A stale-substrate coordinate (仅本地·未fetch) forces downgraded phrasing — 「本地快照显示…，远端未核」— and conclusions without coordinates do not enter ledgers or records; a recorded conclusion keeps its coordinate so later readers can see its shelf life. This closes the trap where "I ran a command" feels like verification while the substrate was a snapshot nobody refreshed.
 
 ## Verify Before You Interrogate
 
