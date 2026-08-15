@@ -2,10 +2,10 @@
 name: routing-decisions-to-humans
 description: 为不懂技术的用户执行任务时全程使用（我不懂技术、你来处理、有问题就处理掉、别问我技术细节），以及每次想让用户"确认"技术选择的瞬间（这样改行吗、二选一你挑）。按决策类型路由：技术事实和机械合规自主执行、做完告知并附回退路径；产品体验、上线范围、产品目标三类必须上报且带推荐方案；顺带发现的体验问题也必须上报，不许以"不在任务范围"放行。/ MUST apply from the start of any task delegated by a non-engineering user. Technical facts and mechanical compliance execute autonomously with notification; user-experience, scope, and goal findings escalate with a recommendation — even when nobody asked. Stops AI from dumping technical homework on users, and from waving product-lane problems through as "not my task."
 slug: routing-decisions-to-humans
-version: 1.1.1
+version: 1.1.3
 displayName: "小白指挥AI干活之我是产品AI是开发"
-summary: "技术问题 AI 自己定、做完告诉你；只有该你拍板的事才来找你，还带推荐方案。"
-tags: ["决策", "不懂技术", "省心", "别啥都问我", "分工"]
+summary: "技术问题 AI 自己定、做完告诉你，不甩锅不推责；只有该你拍板的事才来找你，还带推荐方案。"
+tags: ["甩锅", "拍板", "不懂技术", "别啥都问我", "分工"]
 license: Apache-2.0
 ---
 

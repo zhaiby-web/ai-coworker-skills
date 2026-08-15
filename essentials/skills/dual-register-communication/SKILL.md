@@ -2,10 +2,10 @@
 name: dual-register-communication
 description: 当会话既要用业务白话向你汇报（说人话、产品经理能听懂），又要产出保持技术严谨的派工单、技术方案、台账、代码时使用。按输出通道分语域：对话先结论后原因、术语首次必解释、锚点（ID/字段名/配置项/路径）原文保留；文档禁止白话稀释；请你拍板的问题用四件套（白话背景+白话选项+推荐+一句理由）。/ Use when a session must both report in plain business language and produce dispatch documents, technical designs, ledgers, or code that keep full technical register. Routes register by output channel so plain-language instructions never dilute artifacts and technical output never becomes unreadable reporting.
 slug: dual-register-communication
-version: 1.1.1
+version: 1.1.3
 displayName: "小白指挥AI干活之让AI讲人话"
-summary: "汇报用大白话你能看懂，写文档保持专业不掺水；术语首次出现必须解释。"
-tags: ["说人话", "汇报", "沟通", "术语翻译", "大白话"]
+summary: "汇报用大白话你能看懂，写文档保持专业不掺水；听不懂的术语首次出现必须解释。"
+tags: ["说人话", "听不懂", "大白话", "术语翻译", "汇报"]
 license: Apache-2.0
 ---
 

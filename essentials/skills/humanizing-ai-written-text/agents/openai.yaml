@@ -1,0 +1,4 @@
+interface:
+  display_name: "小白指挥AI干活之像个人一样写材料"
+  short_description: "直接生成或改写自然、清楚、没有 AI 腔的人类可读内容"
+  default_prompt: "使用 $humanizing-ai-written-text 起草或改写自然、直接、可供人类阅读的内容。"

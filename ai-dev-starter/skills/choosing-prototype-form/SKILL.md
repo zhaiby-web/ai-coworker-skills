@@ -2,10 +2,10 @@
 name: choosing-prototype-form
 description: 决定原型该用什么做时使用——HTML 静态稿、React Mock 工程还是先写方案文档；用户说"把 HTML 原型转成 React""做个原型""做客户演示 Demo"时。按阶段和不确定点路由：方向没定先 HTML，方向收敛上 React Mock（统一 API 层+六态覆盖），技术路线未定先写方案；禁止 HTML 机械硬转 React、禁止原型冒充正式代码或冻结契约。/ Use when deciding whether to build an HTML prototype, a React Mock project, or a written spec first. Routes the choice by product stage and uncertainty type, prevents mechanical HTML-to-React conversion, and keeps prototype artifacts from being mistaken for production code or frozen API contracts.
 slug: choosing-prototype-form
-version: 1.1.1
+version: 1.1.2
 displayName: "小白指挥AI开发之原型Demo一把抓"
 summary: "HTML 还是 React 还是先写方案？按阶段选对原型，不做白工、不把 Demo 当正式代码。"
-tags: ["原型", "Demo", "HTML", "React", "产品设计"]
+tags: ["原型", "Demo", "演示Demo", "HTML转React", "原型选型"]
 license: Apache-2.0
 ---
 

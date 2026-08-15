@@ -2,10 +2,10 @@
 name: calibrating-governance-to-stage
 description: 在决定一件事配多重的流程时使用——开评审、写升级报告、宣布事故、加治理文档之前，或用户问"这算不算事故/要不要走全套流程"时。按爆炸半径定价：测试/灰度阶段轻门快跑，接近真实用户才逐级加码；零消费者的产物零治理；写"事故/紧急/P0"前先核实有无真实用户真实影响。四条底线（环境口径如实、不可逆谨慎、口述对实证、安全红线）任何阶段不松。/ Use when deciding how much process a piece of work deserves — before opening approvals, drafting escalations, or declaring incidents. Ceremony is priced by blast radius: dev/pilot stages get light gates, production gets the full apparatus, zero-consumer artifacts get zero governance; four bottom lines never relax. Cures framing dev-stage findings as live incidents and polishing process instead of shipping.
 slug: calibrating-governance-to-stage
-version: 1.1.1
+version: 1.1.3
 displayName: "小白指挥AI干活之分清轻重缓急"
-summary: "测试阶段轻装快跑，别小题大做动不动写事故报告；该严的底线一条不松。"
-tags: ["轻重缓急", "小题大做", "流程", "形式主义", "测试环境"]
+summary: "测试阶段轻装快跑，别小题大做动不动写事故报告；事故定性有检查清单，该严的底线一条不松。"
+tags: ["小题大做", "事故定性", "轻重缓急", "形式主义", "测试环境"]
 license: Apache-2.0
 ---
 
