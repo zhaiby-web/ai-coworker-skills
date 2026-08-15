@@ -7,7 +7,7 @@
     {
       "name": "essentials",
       "source": "./essentials",
-      "description": "AI 同事基本功：让 AI 说人话、别骗你、别烦你、别小题大做。4 个行为矫正 skill，适用于任何让 AI 干活的人。"
+      "description": "AI 同事基本功：让 AI 说人话、别骗你、别烦你、别小题大做、复审只挑真毛病。5 个行为矫正 skill，适用于任何让 AI 干活的人。"
     },
     {
       "name": "ai-dev-starter",
