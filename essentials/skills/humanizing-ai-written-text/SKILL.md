@@ -1,12 +1,12 @@
 ---
 name: humanizing-ai-written-text
 slug: humanizing-ai-written-text
-version: 1.0.0
+version: 1.0.1
 displayName: "小白指挥AI干活之像个人一样写材料"
 summary: "专治 AI 写材料的空话病——自嗨、套话、正确的废话、假大空、过程流水账统统删掉，只留读者要看的实话干货；治的是 AI 腔本身，不做降AI率骗检测。"
 tags: ["去AI味", "AI腔", "空话套话", "写材料", "文案改写"]
 license: Apache-2.0
-description: Use when drafting, generating, or rewriting Chinese or English prose for human readers, especially when the user asks for “去 AI 味”, “像人写”, “说人话”, “自然一点”, or “人类可读”, or when product copy, public pages, reports, emails, documentation, and user-facing summaries risk sounding self-explanatory, process-oriented, defensive, templated, or over-structured.
+description: 在起草、生成或改写给人看的中文/英文文稿时使用——用户说"去 AI 味""像人写""说人话""自然一点""人类可读"时，或产品文案、公开页面、报告、邮件、文档、用户可见摘要出现自我解释、过程叙述、防御性辩解、模板腔、过度分节的迹象时。四道门依次把关：真话→受众边界→该受众内的完整→润色；删过程叙述、自我辩解、空框架和多余对比，保留事实、决策、不确定性与限制。/ Use when drafting, generating, or rewriting Chinese or English prose for human readers, especially when the user asks for “去 AI 味”, “像人写”, “说人话”, “自然一点”, or “人类可读”, or when product copy, public pages, reports, emails, documentation, and user-facing summaries risk sounding self-explanatory, process-oriented, defensive, templated, or over-structured.
 ---
 
 # Humanizing AI-Written Text
@@ -95,6 +95,34 @@ After, as a verified status report:
 > 宣传页现按“用户遇到的问题—需要上传的材料—可以获得的结果”组织。产品决策、技术架构和审核记录保留在内部附件中；公开页未使用内部术语。
 
 Use the status version only when its claims have been verified.
+
+## Quick Reference: Common Scenarios
+
+Each pair anchors one Transformation Rules row. The Before versions read smooth and professional — that is the point: the defect is not clumsiness but a pattern the reader pays for.
+
+**商店/产品文案 —— "不只是 X" 让读者自己猜价值**
+
+> Before：票税助手交付的不只是识别结果，更是一套覆盖报销全流程的智能解决方案，真正实现从票据到报销的效率提升。
+>
+> After：交付从票据识别到报销运营的完整成果：上传票据包，返回分类归档、查重与验真线索、差标预检和可提交的报销单草稿。
+
+Before 每个词都"专业"，但读完不知道产品收什么、给什么。"不只是识别结果"把定义完整价值的工作推给读者，"真正实现""效率提升"是无法验证的自评。After 用输入—输出直接回答。
+
+**长文档 —— "不是 X，而是 Y" 连用成模板腔**
+
+> Before（同一篇文档中三个章节的真实开头）：流程不是"接需求→写代码→提交"，而是一条带门禁的流水线……用例不是研发临时编的，而是从产品语义源生成……环境排查不是简单地"看页面能不能打开"，而是一组证据链……
+>
+> After：流程是一条带门禁的流水线，每个门禁有明确的准入卡和阻断规则。用例从产品语义源派生，问题文本冻结后按版本记录。环境排查按证据链逐层确认：应用状态、启动日志、版本一致性。
+
+单看每一句都通顺甚至有力——病不在句子，在频率：同一篇文档八个章节用同一修辞开头，对比就从"纠偏"退化成了模板。判据：只有读者真的可能误解 X 时才保留对比（如"评审通过 ≠ 开工授权"值得保留），其余直接陈述 Y。
+
+**规范/正文 —— 写作者的过程材料残留在交付物里**
+
+> Before（规范文档某节中间突兀出现）：这是我的目标、现有背景和我对该领域的熟悉程度。先不要实现。请先做一次 blind spot pass：1. 区分我的 known unknowns、unknown knowns 和 unknown unknowns。2. 找出最可能改变架构或用户体验的问题……
+>
+> 处理：整段移出正文。这是写作者喂给 AI 的提示词模板，不是给读者的内容；有保留价值就放进"附录：可复用提示词"或内部文件，且正文不解释"此处删去了什么"。
+
+过程材料混入是真实粘贴事故的常态形态——AI 腔最重的不是措辞，是把生产过程当成内容。Completion Gate 第一条查的就是它：开头句子必须给读者有用内容，而不是写作者的意图。
 
 ## Completion Gate
 
