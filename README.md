@@ -1,10 +1,10 @@
 # AI Coworker Skills · AI 同事技能包
 
-10 个即装即用的 Agent Skill，治的都是让 AI 干活时最常撞的墙：**它说"完成了"其实没完成、它把技术问题甩给你拍板、它把小事写成事故、它顺手把你的文档改成大白话**。
+11 个即装即用的 Agent Skill，治的都是让 AI 干活时最常撞的墙：**它说"完成了"其实没完成、它把技术问题甩给你拍板、它把小事写成事故、它顺手把你的文档改成大白话**。
 
 全部源自一个非研发背景产品经理指挥 AI 开发数月的真实踩坑记录——每条规则背后都有一次返工。纯提示词实现，零依赖、零 API Key、无网络请求，装之前每个字都能审。
 
-> 10 ready-to-use agent skills that fix the most common failure modes of AI coworkers: false "done" claims, technical homework dumped on non-technical users, dev-stage findings dressed up as incidents, and registers bleeding between chat and artifacts. Distilled from months of real rework by a non-engineering PM directing AI development. Pure prompts — zero dependencies, fully auditable.
+> 11 ready-to-use agent skills that fix the most common failure modes of AI coworkers: false "done" claims, technical homework dumped on non-technical users, dev-stage findings dressed up as incidents, and registers bleeding between chat and artifacts. Distilled from months of real rework by a non-engineering PM directing AI development. Pure prompts — zero dependencies, fully auditable.
 
 ## 两个套件 · Two Suites
 
@@ -18,6 +18,7 @@
 | [calibrating-governance-to-stage](essentials/skills/calibrating-governance-to-stage/SKILL.md) 小白指挥AI干活之分清轻重缓急 | 按爆炸半径给流程定价——测试阶段轻装快跑，别把测试环境小事写成"线上事故" |
 | [reviewing-for-substance](essentials/skills/reviewing-for-substance/SKILL.md) 小白指挥AI干活之复审只挑真毛病 | 复审意见必须答得上"不改会坏什么"，措辞找茬不算发现；连续空转必须报警，不许拿文档治理冒充推进 |
 | [humanizing-ai-written-text](essentials/skills/humanizing-ai-written-text/SKILL.md) 小白指挥AI干活之像个人一样写材料 | 专治 AI 写材料的空话病——删自嗨、套话、正确的废话、过程流水账，只留读者要看的实话干货 |
+| [editing-long-documents-consistently](essentials/skills/editing-long-documents-consistently/SKILL.md) 小白指挥AI干活之改文档不留尾巴 | 改长文档时牵一发改全身：先搜全影响面、一轮改齐所有关联处、机械核验零矛盾残留，不再改了这里忘了那里 |
 
 ### `ai-dev-starter/` — 小白指挥 AI 开发（不懂代码但要做出东西的人）
 

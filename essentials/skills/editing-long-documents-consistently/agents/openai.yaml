@@ -1,0 +1,4 @@
+interface:
+  display_name: "小白指挥AI干活之改文档不留尾巴"
+  short_description: "修改方案、契约与治理长文档时清理被取代口径并验证全篇一致性"
+  default_prompt: "Use $editing-long-documents-consistently to update this long document without leaving superseded active claims."
